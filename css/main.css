@@ -1,0 +1,180 @@
+body {
+  font-family: "Lucida Grande", sans-serif;
+}
+
+#app {
+  width: 1085px;
+  height: 799px;
+  background-image: url(../img/back.png);
+}
+
+.front-container {
+  position: relative;
+  width: 972px;
+  height: 799px;
+  margin-left: 57px;
+  overflow: hidden;
+}
+
+#front-image {
+  position: absolute;
+  width: 972px;
+  height: 799px;
+  background-image: url(../img/front.png);
+  background-position: -57px 0;
+  transition: transform 300ms ease;
+  z-index: 10;
+}
+
+#front-image.out {
+  transform: translate(249px, 0);
+}
+
+#tab-center {
+  float: left;
+  margin-top: 74px;
+  width: 248px;
+  height: 600px;
+  font-size: 12px;
+  cursor: default;
+  background-color: #e9e9e9;
+  border-right: 1px solid #333d47;
+}
+
+.tab-button {
+  float: left;
+  width: 33.3333%;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f98700;
+  text-align: center;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.8em;
+  transition-property: border-width, padding, color;
+  transition-duration: 0.2s;
+  background-color: #333d47;
+}
+
+.tab-button.active, .tab-button:hover {
+  border-bottom-width: 4px;
+  padding-bottom: 5px;
+  color: #fff;
+}
+
+.tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+
+.tabs li {
+  clear: both;
+  float: left;
+  padding: 10px 0;
+  color: #000;
+}
+
+.tabs li.active {
+  color: #fff;
+  background-color: #3375c0;
+}
+
+.tabs li:hover:not(.active) {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.tabs li img, .tab-image {
+  float: left;
+  width: 73px;
+  height: 46px;
+  margin-left: 6px;
+  display: block;
+  border: 1px solid #fff;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.4);
+}
+
+.tabs div {
+  float: left;
+  width: 167px;
+  margin-top: 7px;
+}
+
+.tabs div span {
+  display: block;
+  clear: both;
+  margin-left: 10px;
+}
+
+.tabs div span.url  {
+  opacity: 0.6;
+}
+
+.docked-bottom {
+  position: absolute;
+  bottom: 79px;
+  width: 250px;
+  border-bottom-left-radius: 3px;
+  background-color: #333d47;
+}
+
+.tab-groups {
+  position: relative;
+  float: left;
+  background-image: url(../img/arrow.png);
+  background-repeat: no-repeat;
+  background-position: 34px 0;
+  background-size: 22px;
+  margin-bottom: 26px;
+}
+
+.tab-group {
+  height: 74px;
+  width: 60px;
+  float: left;
+  margin-top: 16px;
+  margin-right: 20px;
+  opacity: 0.8;
+  transition: all 200ms ease;
+}
+
+.tab-group:hover, .tab-group.active {
+  opacity: 1;
+}
+
+.tab-image {
+  position: absolute;
+  width: 74px;
+  height: 46px;
+  background-image: url(../img/tab-images/mozilla.png);
+  transition: transform 200ms ease;
+}
+
+.ti-1 { transform: rotate(-10deg) scale(0.8) }
+.ti-2 { transform: rotate(10deg) scale(0.8) }
+.ti-3 { transform: scale(0.8) }
+
+.tab-group:hover .ti-1 { transform: translate(-10px, -10px) rotate(-20deg) }
+.tab-group:hover .ti-2 { transform: translate(20px, -10px) rotate(20deg) }
+.tab-group:hover .ti-3 { transform: translate(0, 10px) rotate(10deg) }
+.tab-group:hover .tab-image {
+  z-index: 5;
+}
+
+.tab-group .caption {
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  width: 90px;
+  position: absolute;
+  bottom: 0;
+}
+
+.toolbar {
+  position: absolute;
+  width: 255px;
+  bottom: 0;
+  background: #1c222a;
+  height: 20px;
+  color: #fff;
+}
