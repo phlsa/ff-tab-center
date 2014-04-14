@@ -19,6 +19,10 @@ var pluckClass = function(className, item, timeout) {
   }, timeout);
 }
 
+var after = function(timeout, fn) {
+  return setTimeout(fn, timeout);
+}
+
 var frontImage = document.getElementById('front-image');
 var trigger = document.getElementById('trigger');
 var currentTabButton = select('.tab-button[data-tab-type="current"]');
@@ -54,10 +58,15 @@ sectionButtons.forEach(function(button) {
 
 
 // Restoring tabs
-var recentTabs = collect('.tabs[data-tab-type="recent"], .tabs[data-tab-type="synced"]');
+var recentTabs = collect('.tabs[data-tab-type="recent"] li, .tabs[data-tab-type="synced"] li');
 recentTabs.forEach(function(item) {
   item.addEventListener('click', function(e) {
-    pluckClass('pulse', currentTabButton, 500);
+    this.classList.add('animate-shrink');
+    var self = this;
+    after(500, function() {
+      pluckClass('pulse', currentTabButton, 500);
+      self.remove();
+    });
   });
 });
 

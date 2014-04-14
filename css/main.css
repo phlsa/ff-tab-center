@@ -132,6 +132,15 @@ body {
   100% { transform:scale(1)   }
 }
 
+.animate-shrink {
+  animation: shrink 0.5s ease;
+}
+
+@keyframes shrink {
+  0%   { transform: none }
+  100% { transform: scale(0.2); opacity:0 }
+}
+
 .tabs {
   list-style: none;
   padding: 0;
