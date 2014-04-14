@@ -87,25 +87,45 @@ body {
   font-style: italic;
 }
 
+.tab-view {
+  width: 100%;
+  float: left;
+  background-color: #333d47;
+  border-bottom: 1px solid #f98700;
+}
+
 .tab-button {
   float: left;
   width: 33.3333%;
   padding-top: 10px;
   padding-bottom: 8px;
-  border-bottom: 1px solid #f98700;
+  border-bottom: 0 solid #f98700;
   text-align: center;
   color: rgba(255,255,255,0.6);
   font-size: 0.75em;
   letter-spacing: 0.04em;
   transition-property: border-width, padding, color;
   transition-duration: 0.2s;
-  background-color: #333d47;
 }
 
 .tab-button.active, .tab-button:hover {
   border-bottom-width: 4px;
   padding-bottom: 5px;
   color: #fff;
+}
+
+.pulse {
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0%   { transform:scale(1)   }
+  50%  {
+         transform:scale(1.2);
+         text-shadow: 0 0 5px #fff;
+         opacity: 1;
+       }
+  100% { transform:scale(1)   }
 }
 
 .tabs {
@@ -125,6 +145,7 @@ body {
   float: left;
   padding: 10px 0;
   color: #000;
+  position: relative;
 }
 
 .tabs li.active {
@@ -160,6 +181,22 @@ body {
 
 .tabs div span.url  {
   opacity: 0.6;
+}
+
+.tabs[data-tab-type="recent"] li:hover:after, .tabs[data-tab-type="synced"] li:hover:after {
+  content: "Restore";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -18px;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 12px;
+  border-radius: 14px;
+  padding: 6px 14px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  border: 2px solid rgba(255,255,255,0.8);
 }
 
 .docked-bottom {

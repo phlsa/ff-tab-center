@@ -11,8 +11,18 @@ var select = function(selector) {
   return document.querySelectorAll(selector)[0];
 }
 
+var pluckClass = function(className, item, timeout) {
+  if (!timeout) timeout = 0;
+  item.classList.add(className);
+  setTimeout(function() {
+    item.classList.remove(className);
+  }, timeout);
+}
+
 var frontImage = document.getElementById('front-image');
 var trigger = document.getElementById('trigger');
+var currentTabButton = select('.tab-button[data-tab-type="current"]');
+
 
 // Slide out the front image
 trigger.addEventListener('click', function(e) {
@@ -22,6 +32,7 @@ trigger.addEventListener('click', function(e) {
 frontImage.addEventListener('click', function(e) {
   frontImage.classList.remove('out');
 });
+
 
 // Switching sections
 var sectionButtons = collect('.tab-button');
@@ -35,3 +46,14 @@ sectionButtons.forEach(function(button) {
     section.classList.add('active');
   });
 });
+
+
+// Restoring tabs
+var recentTabs = collect('.tabs[data-tab-type="recent"], .tabs[data-tab-type="synced"]');
+recentTabs.forEach(function(item) {
+  item.addEventListener('click', function(e) {
+    pluckClass('pulse', currentTabButton, 500);
+  });
+});
+
+
