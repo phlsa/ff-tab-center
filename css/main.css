@@ -207,6 +207,24 @@ body {
   background-color: #dd6719;
 }
 
+.last-entry {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: #9daec0 !important;
+  text-shadow: 0 1px 0 #fff;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.last-entry:after {
+  display: none;
+}
+.last-entry:hover {
+  background-color: inherit !important;
+  text-decoration: underline;
+}
+
 .docked-bottom {
   position: absolute;
   bottom: 79px;
