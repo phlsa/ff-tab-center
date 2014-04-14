@@ -18,65 +18,111 @@
         <div id="tab-center">
           <div class="header">
             <input type="text" id="search-field" placeholder="Find Tabs">
+            <div class="toolbar-button" data-label="New Tab">+ New Tab</div>
           </div>
           <div class="tab-view">
             <div class="sections">
-              <div class="tab-button active">
+              <div class="tab-button active" data-tab-type="current">
                 CURRENT TABS
               </div>
-              <div class="tab-button">
+              <div class="tab-button" data-tab-type="recent">
                 RECENT
               </div>
-              <div class="tab-button">
+              <div class="tab-button" data-tab-type="synced">
                 OTHER DEVICES
               </div>
             </div>
           </div>
 
-          <ul class="tabs">
-            <li class="active">
-              <img src="img/tab-images/mozilla.png" alt="Mozilla">
-              <div>
-                <span class="caption">Mozilla</span>
-                <span class="url">www.mozilla.com</span>
-              </div>
-            </li>
-            <li>
-              <img src="img/tab-images/mozilla.png" alt="Mozilla">
-              <div>
-                <span class="caption">Mozilla</span>
-                <span class="url">www.mozilla.com</span>
-              </div>
-            </li>
-            <li>
-              <img src="img/tab-images/mozilla.png" alt="Mozilla">
-              <div>
-                <span class="caption">Mozilla</span>
-                <span class="url">www.mozilla.com</span>
-              </div>
-            </li>
-            <li>
-              <img src="img/tab-images/mozilla.png" alt="Mozilla">
-              <div>
-                <span class="caption">Mozilla</span>
-                <span class="url">www.mozilla.com</span>
-              </div>
-            </li>
-            <li>
-              <img src="img/tab-images/mozilla.png" alt="Mozilla">
-              <div>
-                <span class="caption">Mozilla</span>
-                <span class="url">www.mozilla.com</span>
-              </div>
-            </li>
-            <li>
-              <img src="img/tab-images/mozilla.png" alt="Mozilla">
-              <div>
-                <span class="caption">Mozilla</span>
-                <span class="url">www.mozilla.com</span>
-              </div>
-            </li>
-          </ul>
+          <div class="tab-container">
+            <ul class="tabs active" data-tab-type="current">
+              <li class="active">
+                <img src="img/tab-images/mozilla.png" alt="Mozilla">
+                <div>
+                  <span class="caption">Mozilla</span>
+                  <span class="url">www.mozilla.com</span>
+                </div>
+              </li>
+              <li>
+                <img src="img/tab-images/mozilla.png" alt="Mozilla">
+                <div>
+                  <span class="caption">Mozilla</span>
+                  <span class="url">www.mozilla.com</span>
+                </div>
+              </li>
+              <li>
+                <img src="img/tab-images/mozilla.png" alt="Mozilla">
+                <div>
+                  <span class="caption">Mozilla</span>
+                  <span class="url">www.mozilla.com</span>
+                </div>
+              </li>
+              <li>
+                <img src="img/tab-images/mozilla.png" alt="Mozilla">
+                <div>
+                  <span class="caption">Mozilla</span>
+                  <span class="url">www.mozilla.com</span>
+                </div>
+              </li>
+              <li>
+                <img src="img/tab-images/mozilla.png" alt="Mozilla">
+                <div>
+                  <span class="caption">Mozilla</span>
+                  <span class="url">www.mozilla.com</span>
+                </div>
+              </li>
+              <li>
+                <img src="img/tab-images/mozilla.png" alt="Mozilla">
+                <div>
+                  <span class="caption">Mozilla</span>
+                  <span class="url">www.mozilla.com</span>
+                </div>
+              </li>
+            </ul>
+
+
+            <ul class="tabs" data-tab-type="recent">
+              <li>
+                <img src="img/tab-images/mozilla.png" alt="Mozilla">
+                <div>
+                  <span class="caption">Mozilla</span>
+                  <span class="url">www.mozilla.com</span>
+                </div>
+              </li>
+              <li>
+                <img src="img/tab-images/mozilla.png" alt="Mozilla">
+                <div>
+                  <span class="caption">Mozilla</span>
+                  <span class="url">www.mozilla.com</span>
+                </div>
+              </li>
+            </ul>
+
+
+            <ul class="tabs" data-tab-type="synced">
+              <li>
+                <img src="img/tab-images/mozilla.png" alt="Mozilla">
+                <div>
+                  <span class="caption">Mozilla</span>
+                  <span class="url">www.mozilla.com</span>
+                </div>
+              </li>
+              <li>
+                <img src="img/tab-images/mozilla.png" alt="Mozilla">
+                <div>
+                  <span class="caption">Mozilla</span>
+                  <span class="url">www.mozilla.com</span>
+                </div>
+              </li>
+              <li>
+                <img src="img/tab-images/mozilla.png" alt="Mozilla">
+                <div>
+                  <span class="caption">Mozilla</span>
+                  <span class="url">www.mozilla.com</span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div class="docked-bottom">
@@ -102,9 +148,7 @@
           </div>
           <div class="toolbar-container">
             <div class="toolbar">
-              <div class="toolbar-button" data-label="New Tab">+</div>
-              <div class="toolbar-button" data-label="New Tab Group">+</div>
-              <div class="toolbar-label" id="label-placeholder"></div>
+              <div class="toolbar-button" data-label="New Tab Group">+ New Tab Group</div>
             </div>
           </div>
         </div>

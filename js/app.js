@@ -1,3 +1,16 @@
+var collect = function(selector) {
+  var items = document.querySelectorAll(selector);
+  var ar = [];
+  for (var i=0; i<items.length; i++) {
+    ar.push(items[i]);
+  }
+  return ar;
+}
+
+var select = function(selector) {
+  return document.querySelectorAll(selector)[0];
+}
+
 var frontImage = document.getElementById('front-image');
 var trigger = document.getElementById('trigger');
 
@@ -10,15 +23,15 @@ frontImage.addEventListener('click', function(e) {
   frontImage.classList.remove('out');
 });
 
-// Showing the label for toolbar buttons
-var labelPlaceholder = document.getElementById('label-placeholder');
-var toolbarButtons = document.querySelectorAll('.toolbar-button');
-for (var i=0; i<toolbarButtons.length; i++) {
-  toolbarButtons[i].addEventListener('mouseover', function(e) {
-    var label = e.currentTarget.getAttribute('data-label');
-    labelPlaceholder.innerHTML = label;
+// Switching sections
+var sectionButtons = collect('.tab-button');
+sectionButtons.forEach(function(button) {
+  var type = button.getAttribute('data-tab-type');
+  var section = select('.tabs[data-tab-type="' + type + '"]');
+  button.addEventListener('click', function(e) {
+    sectionButtons.forEach(function(item) { item.classList.remove('active') });
+    collect('.tabs').forEach(function(item) { item.classList.remove('active') });
+    button.classList.add('active');
+    section.classList.add('active');
   });
-  toolbarButtons[i].addEventListener('mouseout', function(e) {
-    labelPlaceholder.innerHTML = "";
-  });
-}
+});

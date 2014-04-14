@@ -113,6 +113,11 @@ body {
   padding: 0;
   margin: 0;
   color: #fff;
+  display: none;
+}
+
+.tabs.active {
+  display: block;
 }
 
 .tabs li {
@@ -223,18 +228,19 @@ body {
 
 .toolbar-button, .toolbar-label {
   float: left;
-  padding: 4px 6px 6px 6px;
+  padding: 8px 6px 10px 6px;
   font-weight: bold;
   cursor: default;
+  font-size: 10px;
 }
 
 .toolbar-button:hover {
   background-color: rgba(255,255,255,0.3);
 }
 
-.toolbar-label {
-  font-weight: normal;
-  font-size: 0.7em;
-  color: rgba(255,255,255,0.6);
-  padding-top: 8px;
+.header .toolbar-button {
+  float: right;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 6px;
 }
