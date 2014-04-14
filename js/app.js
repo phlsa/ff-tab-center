@@ -44,6 +44,11 @@ sectionButtons.forEach(function(button) {
     collect('.tabs').forEach(function(item) { item.classList.remove('active') });
     button.classList.add('active');
     section.classList.add('active');
+    if (type === "current") {
+      select('.docked-bottom').classList.remove('hidden');
+    } else {
+      select('.docked-bottom').classList.add('hidden');
+    }
   });
 });
 

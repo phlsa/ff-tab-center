@@ -2,6 +2,10 @@ body {
   font-family: "Lucida Grande", sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 #app {
   width: 1085px;
   height: 799px;
@@ -58,7 +62,7 @@ body {
   float: left;
   margin-top: 74px;
   width: 248px;
-  height: 600px;
+  height: 646px;
   font-size: 12px;
   cursor: default;
   background-color: #e9e9e9;
@@ -197,6 +201,10 @@ body {
   padding: 6px 14px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
   border: 2px solid rgba(255,255,255,0.8);
+}
+
+.tabs[data-tab-type="recent"] li:active:after, .tabs[data-tab-type="synced"] li:active:after {
+  background-color: #dd6719;
 }
 
 .docked-bottom {
