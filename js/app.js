@@ -58,7 +58,7 @@ sectionButtons.forEach(function(button) {
 
 
 // Restoring tabs
-var recentTabs = collect('.tabs[data-tab-type="recent"] li, .tabs[data-tab-type="synced"] li');
+var recentTabs = collect('.tabs[data-tab-type="recent"] li:not(.last-entry), .tabs[data-tab-type="synced"] li:not(.last-entry)');
 recentTabs.forEach(function(item) {
   item.addEventListener('click', function(e) {
     this.classList.add('animate-shrink');
