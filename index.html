@@ -16,10 +16,6 @@
         </div>
 
         <div id="tab-center">
-          <div class="header">
-            <input type="text" id="search-field" placeholder="Find Tabs">
-            <div class="toolbar-button" data-label="New Tab">+ New Tab</div>
-          </div>
           <div class="tab-view">
             <div class="sections">
               <div class="tab-button active" data-tab-type="current">
@@ -35,6 +31,10 @@
           </div>
 
           <div class="tab-container">
+            <div class="header">
+              <input type="text" id="search-field" placeholder="Find Tabs">
+              <div class="toolbar-button" data-label="New Tab">+ New Tab</div>
+            </div>
             <ul class="tabs active" data-tab-type="current">
               <li class="active">
                 <img src="img/tab-images/mozilla.png" alt="Mozilla">
@@ -137,30 +137,57 @@
               <div class="tab-image ti-1"></div>
               <div class="tab-image ti-2"></div>
               <div class="tab-image ti-3"></div>
-              <div class="caption">Default Group</div>
+              <!-- <div class="caption">Default Group</div> -->
             </div>
             <div class="tab-group">
               <div class="tab-image ti-1"></div>
               <div class="tab-image ti-2"></div>
               <div class="tab-image ti-3"></div>
-              <div class="caption">Research</div>
+              <!-- <div class="caption">Research</div> -->
             </div>
             <div class="tab-group">
-              <div class="tab-image ti-1"></div>
-              <div class="tab-image ti-2"></div>
-              <div class="tab-image ti-3"></div>
-              <div class="caption">Cat GIFs</div>
+              <div class="new-tab-group">+</div>
             </div>
           </div>
-          <div class="toolbar-container">
+          <!-- div class="toolbar-container">
             <div class="toolbar">
               <div class="toolbar-button" data-label="New Tab Group">+ New Tab Group</div>
             </div>
-          </div>
+          </div> -->
         </div>
 
       </div>
     </div>
+
+    <h1>Further Explanation</h1>
+    <h2>Modes</h2>
+    <p>Tab center has two modes that can be toggled in the preferences: Tabs on top and side tabs.</p>
+    <ul>
+      <li><strong>Tabs on top:</strong> Tab center is hidden by default and can be opened using a toolbar item. It can then be closed by either clicking that item again, or by clicking anywhere inside the web page.</li>
+      <li><strong>Side tabs:</strong> Tab center is opened all the time and serves as a side tabs implementation. Tabs on top are hidden.</li>
+    </ul>
+
+    <h2>Displaying tabs</h2>
+    <ul>
+      <li>Usually, tabs are represented by a thumbnail, the tab title and the URL of the page</li>
+      <li>If those list entries fill up the entire height of the window, they start to shrink as new tabs get opened</li>
+      <li>Once the thumbnail becomes too small, it switches to displaying favicons instead</li>
+      <li>The URL is hidden if there's no space for it</li>
+      <li>The list will become scrollable only after the items have reached their minimum height</li>
+    </ul>
+
+    <h2>Tab groups</h2>
+    <ul>
+      <li>Tab groups are represented by a maximum of three thumbnails</li>
+      <li>When there are more groups than can be displayed in tray, that tray becomes scrollable in horizontal direction</li>
+    </ul>
+
+    <h2>Restoring tabs</h2>
+    <p>When restoring tabs (either from recent tabs or from other devices), the following will happen:</p>
+    <ul>
+      <li><strong>Tabs-on-top-mode: </strong> The tab is added to the tab strip and tab center closes automatically.</li>
+      <li><strong>Side-tabs-mode: </strong> The view jumps back to »Current Tabs« where the restored tab is added to the list (and displayed in the content view)</li>
+    </ul>
 
     <script src="./js/app.js"></script>
   </body>

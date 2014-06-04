@@ -2,8 +2,10 @@ body {
   font-family: "Lucida Grande", sans-serif;
 }
 
-p {
+body > p, body > ul, h1, h2, h3 {
   max-width: 800px;
+  line-height: 140%;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .hidden {
@@ -74,21 +76,21 @@ p {
 }
 
 .header {
-  background-color: #333d47;
+  border-bottom: 1px solid #999;
 }
 
 #search-field {
-  background-color: rgba(255,255,255,0.15);
-  color: rgba(255,255,255,0.8);
-  border: 1px solid rgba(255,255,255,0.4);
+  background-color: rgba(255,255,255,0.35);
+  color: rgba(0,0,0,0.8);
+  border: 1px solid rgba(0,0,0,0.4);
   border-radius: 12px;
   padding: 3px 8px;
-  margin: 4px;
+  margin: 8px 4px;
   transition: background-color 0.15s linear;
 }
 
 #search-field:focus {
-  background-color: rgba(255,255,255,0.25);
+  background-color: rgba(255,255,255,1);
 }
 
 #search-field::-moz-placeholder {
@@ -253,15 +255,14 @@ p {
   background-repeat: no-repeat;
   background-position: 34px 0;
   background-size: 22px;
-  margin-bottom: 36px;
 }
 
 .tab-group {
-  height: 74px;
+  height: 50px;
   width: 60px;
   float: left;
   margin-top: 16px;
-  margin-right: 20px;
+  margin-right: 22px;
 }
 
 .tab-image {
@@ -272,8 +273,8 @@ p {
   transition: transform 200ms ease;
 }
 
-.ti-1 { transform: rotate(-10deg) scale(0.8) }
-.ti-2 { transform: rotate(10deg) scale(0.8) }
+.ti-1 { transform: translate(10px, -10px) scale(0.8) }
+.ti-2 { transform: translate(5px, -5px) scale(0.8) }
 .ti-3 { transform: scale(0.8) }
 
 .tab-group:hover .ti-1 { transform: translate(-10px, -10px) rotate(-20deg) }
@@ -281,6 +282,26 @@ p {
 .tab-group:hover .ti-3 { transform: translate(0, 10px) rotate(10deg) }
 .tab-group:hover .tab-image {
   z-index: 5;
+}
+
+.new-tab-group {
+  font-weight: bold;
+  font-size: 40px;
+  color: #fff;
+  transform: translate(14px, -4px);
+  border: 2px dashed #fff;
+  text-align: center;
+  line-height: 35px;
+  padding-bottom: 7px;
+  border-radius: 3px;
+  opacity: 0.6;
+  transition: all 0.15s linear;
+}
+
+.new-tab-group:hover {
+  background-color: rgba(255,255,255,0.4);
+  cursor: default;
+  opacity: 0.9;
 }
 
 .tab-group .caption {
@@ -311,12 +332,12 @@ p {
 }
 
 .toolbar-button:hover {
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(0,0,0,0.1);
 }
 
 .header .toolbar-button {
   float: right;
-  color: #fff;
-  padding-top: 10px;
-  padding-bottom: 6px;
+  color: #333;
+  padding-top: 12px;
+  padding-bottom: 13px;
 }
