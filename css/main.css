@@ -9,7 +9,7 @@ body > p, body > ul, h1, h2, h3 {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 #app {
@@ -340,4 +340,30 @@ body > p, body > ul, h1, h2, h3 {
   color: #333;
   padding-top: 12px;
   padding-bottom: 13px;
+}
+
+ul.pinned {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+ul.pinned li {
+  display: block;
+  float: left;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 1px 1px;
+  background-image: url(../img/favicon.ico);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+ul.pinned li:hover {
+  background-color: rgba(0,0,0,0.1);
 }

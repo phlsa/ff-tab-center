@@ -50,8 +50,10 @@ sectionButtons.forEach(function(button) {
     section.classList.add('active');
     if (type === "current") {
       select('.docked-bottom').classList.remove('hidden');
+      select('.pinned').classList.remove('hidden');
     } else {
       select('.docked-bottom').classList.add('hidden');
+      select('.pinned').classList.add('hidden');
     }
   });
 });
