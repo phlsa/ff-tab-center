@@ -72,4 +72,10 @@ recentTabs.forEach(function(item) {
   });
 });
 
+// Switching between MVP and full mode
+select('#toggle-mvp').addEventListener('click', function() {
+  select('.sections').classList.toggle('hidden');
+  select('.docked-bottom').classList.toggle('hidden');
+});
+
 
