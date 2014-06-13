@@ -78,4 +78,8 @@ select('#toggle-mvp').addEventListener('click', function() {
   select('.docked-bottom').classList.toggle('hidden');
 });
 
+// Toggling small mode
+select('#toggle-small-mode').addEventListener('click', function() {
+  select('#app').classList.toggle('small-mode')
+});
 

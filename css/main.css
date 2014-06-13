@@ -200,20 +200,24 @@ body > p, body > ul, h1, h2, h3 {
   bottom: 11px;
 }
 
-.tabs div {
+.tabs div, .pinned div {
   float: left;
   width: 167px;
   margin-top: 7px;
 }
 
-.tabs div span {
+.tabs div span, .pinned div span {
   display: block;
   clear: both;
   margin-left: 10px;
 }
 
-.tabs div span.url  {
+.tabs div span.url, .pinned div span.url  {
   opacity: 0.6;
+}
+
+.pinned div {
+  display: none;
 }
 
 .tabs[data-tab-type="recent"] li:hover:after, .tabs[data-tab-type="synced"] li:hover:after {

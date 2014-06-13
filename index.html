@@ -4,13 +4,16 @@
     <meta charset="utf-8">
     <title>Firefox Tab Center</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/small-mode.css">
   </head>
   <body>
   <h1>Firefox Tab Center Prototype</h1>
   <p>This is a <strong>concept</strong> for advanced tab management, side tabs and pulling together tab related features in one place. It is <strong>not</strong> a completed spec. The discussion happens in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=989383">bug 989383</a>.</p>
+  
   <button id="toggle-mvp">Toggle MVP</button>
+  <button id="toggle-small-mode">Toggle Small Mode</button>
 
-    <div id="app">
+    <div id="app" class="small-mode">
       <div class="front-container">
         <div id="front-image" class="out">
           <div id="trigger"></div>
@@ -37,10 +40,30 @@
 
           <div class="tab-container">
             <ul class="pinned">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>
+                <div>
+                  <span class="caption">Mozilla</span>
+                  <span class="url">www.mozilla.com</span>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span class="caption">Mozilla</span>
+                  <span class="url">www.mozilla.com</span>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span class="caption">Mozilla</span>
+                  <span class="url">www.mozilla.com</span>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span class="caption">Mozilla</span>
+                  <span class="url">www.mozilla.com</span>
+                </div>
+              </li>
             </ul>
             <ul class="tabs active" data-tab-type="current">
               <li class="active">

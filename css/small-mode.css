@@ -1,0 +1,71 @@
+.small-mode #tab-center {
+  width: 48px;
+}
+
+.small-mode #front-image.out {
+  transform: translate(48px, 0);
+}
+
+.small-mode .sections, .small-mode .docked-bottom {
+  display: none;
+}
+
+.small-mode .tabs li div, .small-mode .pinned li div {
+  position: absolute;
+  z-index: 999;
+  margin-left: 48px;
+  background: #fff;
+  border: 1px solid #888;
+  box-shadow: 0 2px 7px rgba(0,0,0,0.3);
+  display: none;
+  pointer-events: none;
+}
+.small-mode .tabs li:hover div, .small-mode .pinned li:hover div {
+  display: block;
+}
+
+.small-mode .tabs li div:after,
+.small-mode .tabs li div:before,
+.small-mode .pinned li div:after,
+.small-mode .pinned li div:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.small-mode .tabs li div:after, .small-mode .pinned li div:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-right-color: #ffffff;
+  border-width: 10px;
+  margin-top: -10px;
+  }
+.small-mode .tabs li div:before, .small-mode .pinned li div:before {
+  border-color: rgba(136, 136, 136, 0);
+  border-right-color: #888;
+  border-width: 11px;
+  margin-top: -11px;
+}
+
+.small-mode .tabs li, .small-mode .pinned li {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  background-image: url("../img/favicon.ico");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.small-mode .tabs li:before {
+  display: none;
+}
+
+.small-mode .tabs img {
+  display: none;
+}
+
+.small-mode .pinned {
+  border-bottom: 2px solid #888;
+}
