@@ -341,7 +341,7 @@ body > p, body > ul, h1, h2, h3 {
   color: #fff;
 }
 
-.toolbar-button, .toolbar-label {
+.toolbar-button, .toolbar-label, .toolbar-button:after {
   float: left;
   padding: 8px 6px 10px 6px;
   font-weight: bold;
@@ -353,11 +353,16 @@ body > p, body > ul, h1, h2, h3 {
   background-color: rgba(0,0,0,0.1);
 }
 
-.header .toolbar-button {
+.header .toolbar-button:after {
   float: right;
   color: #fff;
   padding-top: 12px;
   padding-bottom: 13px;
+  content: "+ New Tab";
+}
+.header .toolbar-button {
+  float: right;
+  padding: 0;
 }
 
 ul.pinned {
