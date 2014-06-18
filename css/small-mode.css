@@ -10,7 +10,7 @@
   display: none;
 }
 
-.small-mode .tabs li div, .small-mode .pinned li div {
+.small-mode .tabs li div, .small-mode .pinned li div, .small-mode .header {
   position: absolute;
   z-index: 999;
   margin-left: 48px;
@@ -21,14 +21,18 @@
   pointer-events: none;
   color: #000 !important;
 }
-.small-mode .tabs li:hover div, .small-mode .pinned li:hover div {
+.small-mode .tabs li:hover div,
+.small-mode .pinned li:hover div,
+.small-mode .search-container:hover .header {
   display: block;
 }
 
 .small-mode .tabs li div:after,
 .small-mode .tabs li div:before,
 .small-mode .pinned li div:after,
-.small-mode .pinned li div:before {
+.small-mode .pinned li div:before,
+.small-mode .header:after,
+.small-mode .header:before {
   right: 100%;
   top: 50%;
   border: solid transparent;
@@ -38,20 +42,25 @@
   position: absolute;
   pointer-events: none;
 }
-.small-mode .tabs li div:after, .small-mode .pinned li div:after {
+.small-mode .tabs li div:after,
+.small-mode .pinned li div:after,
+.small-mode .header:after {
   border-color: rgba(255, 255, 255, 0);
   border-right-color: #ffffff;
   border-width: 10px;
   margin-top: -10px;
 }
-.small-mode .tabs li div:before, .small-mode .pinned li div:before {
+.small-mode .tabs li div:before,
+.small-mode .pinned li div:before,
+.small-mode .header:before {
   border-color: rgba(136, 136, 136, 0);
   border-right-color: #888;
   border-width: 11px;
   margin-top: -11px;
 }
 
-.small-mode .tabs li, .small-mode .pinned li {
+.small-mode .tabs li,
+.small-mode .pinned li {
   width: 48px;
   height: 48px;
   padding: 0;
@@ -71,16 +80,32 @@
   border-bottom: 2px solid #888;
 }
 
-.small-mode #search-field {
-  width: 20px;
-}
-
 .small-mode .toolbar-button:after {
-  font-size: 24px;
+  /*font-size: 24px;
   width: 48px;
   height: 40px;
   color: #fff;
   text-align: center;
   padding: 8px 0 0 0;
-  content: "+";
+  content: "+";*/
+  display: none;
+}
+
+.small-mode .search-icon {
+  display: block;
+  text-align: center;
+}
+
+.small-mode .search-icon:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.small-mode .header {
+  position: absolute;
+  margin-top: -40px;
+  pointer-events: auto;
+}
+
+.small-mode #search-field {
+  margin-right: 7px;
 }

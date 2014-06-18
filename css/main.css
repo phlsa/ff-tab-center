@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "entypo";
+  src: url("../entypo/entypo.eot");
+  src: url("../entypo/entypo.woff");
+  src: url("../entypo/entypo.svg");
+  src: url("../entypo/entypo.ttf");
+}
+
 body {
   font-family: "Lucida Grande", sans-serif;
 }
@@ -389,4 +397,11 @@ ul.pinned li {
 
 ul.pinned li:hover {
   background-color: rgba(0,0,0,0.1);
+}
+
+.search-icon {
+  font-family: "entypo";
+  color: #fff;
+  font-size: 32px;
+  display: none;
 }
