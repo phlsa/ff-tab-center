@@ -76,6 +76,7 @@ recentTabs.forEach(function(item) {
 select('#toggle-mvp').addEventListener('click', function() {
   select('.sections').classList.toggle('hidden');
   select('.docked-bottom').classList.toggle('hidden');
+  select('.dimmer').classList.toggle('mvp');
 });
 
 // Toggling small mode

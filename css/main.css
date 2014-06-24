@@ -430,6 +430,11 @@ ul.pinned li:hover {
   transition: opacity 0.3s ease;
 }
 
+.dimmer.mvp {
+  margin-top: 38px;
+  height: calc(643px - 35px);
+}
+
 .dimmer.hidden {
   display: block !important;
   opacity: 0;
