@@ -83,3 +83,18 @@ select('#toggle-small-mode').addEventListener('click', function() {
   select('#app').classList.toggle('small-mode')
 });
 
+
+// Searching
+var searchField = select("#search-field");
+searchField.addEventListener('keyup', function() {
+  var dimmer = select(".dimmer");
+  var searchResults = select(".search-overlay");
+  if (searchField.value == "") {
+    dimmer.classList.add('hidden');
+    searchResults.classList.add('hidden');
+  } else {
+    dimmer.classList.remove('hidden');
+    searchResults.classList.remove('hidden');
+  }
+});
+
